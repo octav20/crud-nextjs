@@ -42,7 +42,7 @@ export default function ProductPage({ product }) {
 
 export const getServerSideProps = async (ctx) => {
   const { data: product } = await axios.get(
-    `http://${DB_HOST}:${PORT}/api/products/` + ctx.query.id
+    `https://crud-nextjs-beta.vercel.app/api/products` + ctx.query.id
   );
 
   return {
